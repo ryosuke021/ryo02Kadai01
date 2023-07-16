@@ -9,11 +9,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var number1TextField: UITextField!
+    @IBOutlet weak var number2TextField: UITextField!
+    @IBOutlet weak var number3TextField: UITextField!
+    @IBOutlet weak var number4TextField: UITextField!
+    @IBOutlet weak var number5TextField: UITextField!
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    @IBAction func calculateButton(_ sender: Any) {
+        let number1 = Int(number1TextField.text ?? "") ?? 0
+        let number2 = Int(number2TextField.text ?? "") ?? 0
+        let number3 = Int(number3TextField.text ?? "") ?? 0
+        let number4 = Int(number4TextField.text ?? "") ?? 0
+        let number5 = Int(number5TextField.text ?? "") ?? 0
+        
+        let result = number1 + number2 + number3 + number4 + number5
+        resultLabel.text = "\(result)"
     }
-
-
+    
 }
 
